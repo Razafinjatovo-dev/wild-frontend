@@ -11,7 +11,7 @@ const Form = () => {
   //Fetch Crew members list
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${Url}/`);
+      const response = await axios.get(`${Url}`);
       setCrewMembers(response.data);
       setIsLoading(false);
     };
@@ -26,7 +26,7 @@ const Form = () => {
     event.preventDefault();
     try {
       const field = { name: crewMemberName };
-      await axios.post(`${Url}/Add-CrewMember`, field);
+      await axios.post(`${Url}Add-CrewMember`, field);
       setCrewMemberName("");
       console.log(crewMemberName);
     } catch (error) {
