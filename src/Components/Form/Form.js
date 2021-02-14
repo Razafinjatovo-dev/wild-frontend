@@ -6,7 +6,7 @@ const Form = () => {
   const [crewMembers, setCrewMembers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [crewMemberName, setCrewMemberName] = useState("");
-  const Url = "http://localhost:3200";
+  const Url = "https://wildcode-backend.herokuapp.com/";
 
   //Fetch Crew members list
   useEffect(() => {
